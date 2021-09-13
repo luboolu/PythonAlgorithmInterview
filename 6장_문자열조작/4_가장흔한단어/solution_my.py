@@ -6,9 +6,9 @@ class Solution:
         print(words)
         dic = []
 
-        for i in range(len(banned)):
-            banned[i] = banned[i].lower()
+        banned = [b.lower() for b in banned]
 
+        #b,b,b,b 처럼 공백 없이 나뉜 문자를 찾지 못함
         for word in words:
             tmp = ""
             for w in word:
