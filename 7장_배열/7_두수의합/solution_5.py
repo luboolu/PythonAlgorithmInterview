@@ -12,7 +12,7 @@ class Solution:
                 right -= 1
             else:
                 return [left, right]
-
+        ##정렬되어야 정답 반환
                 
 sol = Solution()
 print(sol.twoSum([2, 7, 11, 15], 9))
