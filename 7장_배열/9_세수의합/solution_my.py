@@ -12,6 +12,9 @@ class Solution:
                             if [nums[i], nums[j], nums[k]] not in answer:
                                 answer.append([nums[i], nums[j], nums[k]])
 
+        ##정답은 맞지만 time out
+        ##O(n3)라 안되는듯
+
         return answer
 
 
