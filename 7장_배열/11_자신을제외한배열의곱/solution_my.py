@@ -6,7 +6,7 @@ class Solution:
         product_list = []
 
         for n in nums:
-
+            pass
 
 
 
