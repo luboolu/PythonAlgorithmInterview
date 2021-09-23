@@ -8,16 +8,14 @@ class Solution:
         if len(prices) == 1:
             return 0
 
-        max_day = prices.index(max(prices[1:]))
-        min_day = prices.index(min(prices[:-1]))
-        print(min_day, max_day)
-        profit = prices[max_day] - prices[min_day]
-        if min_day < max_day and profit > 0:
-            return profit
-        else:
-            return 0
+        profit = []
+        for i in range(len(prices)):
+            for j in range(i, len(prices)):
+                profit.append(prices[j] - prices[i])
+
+        return max(profit)
 
 
 sol = Solution()
-#print(sol.maxProfit([7, 1, 5, 3, 6, 4]))
+print(sol.maxProfit([7, 1, 5, 3, 6, 4]))
 print(sol.maxProfit([2, 1]))
