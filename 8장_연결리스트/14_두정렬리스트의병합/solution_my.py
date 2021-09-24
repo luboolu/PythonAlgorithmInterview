@@ -19,5 +19,6 @@ class Solution:
             q2.append(node2.val)
             node2 = node2.next
 
-        print(q1)
-        print(q2)
+        merge = sorted(q1 + q1)
+
+        return merge
