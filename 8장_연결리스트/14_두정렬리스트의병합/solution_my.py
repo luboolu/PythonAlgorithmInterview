@@ -1,5 +1,10 @@
+from typing import List
 # Definition for singly-linked list.
 # class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+# Definition for singly-linked list.# class ListNode:
 #     def __init__(self, val=0, next=None):
 #         self.val = val
 #         self.next = next
@@ -20,5 +25,12 @@ class Solution:
             node2 = node2.next
 
         merge = sorted(q1 + q1)
+        merge_list = []
+        for m in merge:
+            merge_list.append(ListNode(m))
 
-        return merge
+        for i, m in enumerate(merge_list):
+            if i < len(merge) - 1:
+                merge_list[i].next = merge_list[i + 1]
+
+        return merge_list
