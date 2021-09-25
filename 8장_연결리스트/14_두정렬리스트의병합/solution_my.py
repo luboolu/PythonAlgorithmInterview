@@ -1,15 +1,12 @@
 from typing import List
 # Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
-# Definition for singly-linked list.# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
 class Solution:
-    def mergeTwoLists(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
+    def mergeTwoLists(self, l1: [ListNode], l2: [ListNode]) -> [ListNode]:
         q1: List = []
         q2: List = []
 
@@ -34,3 +31,6 @@ class Solution:
                 merge_list[i].next = merge_list[i + 1]
 
         return merge_list
+
+sol = Solution()
+print(sol.mergeTwoLists([1,2,4],[1,3,4]))
